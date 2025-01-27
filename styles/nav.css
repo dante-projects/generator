@@ -1,0 +1,120 @@
+:root {
+    --liSize: 5vh;
+}
+
+nav {
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+
+    form {
+        width: var(--liSize);
+        height: 100%;
+        margin-left: 10px;
+
+        .listaCategorias {
+            width: 100%;
+            height: 96%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &:has(li .checkboxNav:checked) {
+                li {
+                    left: 0;
+                }
+            }
+
+            li {
+                position: relative;
+                transform: translateX(-200px);
+                width: 100%;
+                aspect-ratio: 1/1;
+                border-radius: 10px;
+                border: 1px solid grey;
+                transition: .5s;
+
+                &:first-of-type {
+                    transform: translateX(0px);
+                }
+
+                &:has(input:checked),
+                &:has(input:not(:checked):hover) {
+                    border-color: transparent;
+                    background-color: var(--grisOscuro);
+
+                    .iconoNav {
+                        background-color: rgb(129, 197, 206);
+                        mask-size: 60%;
+                    }
+                }
+
+                &:has(input:not(:checked):hover) .iconoNav {
+                    background-color: white;
+                }
+
+                input {
+                    position: absolute;
+                    z-index: 1;
+                    appearance: none;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .iconoNav {
+                    width: 100%;
+                    height: 100%;
+                    background-color: grey;
+                    mask-size: 50%;
+                    mask-position: center;
+                    mask-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+nav:hover,
+nav:has(form .listaCategorias li:first-of-type input:checked) {
+
+    form .listaCategorias li {
+        transform: translateX(0px);
+
+        &:nth-of-type(2) {
+            transition: transform .4s 0s;
+        }
+
+        &:nth-of-type(3) {
+            transition: transform .4s .1s;
+        }
+
+        &:nth-of-type(4) {
+            transition: transform .4s .2s;
+        }
+
+        &:nth-of-type(5) {
+            transition: transform .4s .3s;
+        }
+
+        &:nth-of-type(6) {
+            transition: transform .4s .4s;
+        }
+
+        &:nth-of-type(7) {
+            transition: transform .4s .5s;
+        }
+
+        &:nth-of-type(8) {
+            transition: transform .4s .6s;
+        }
+
+        &:nth-of-type(9) {
+            transition: transform .4s .7s;
+        }
+
+        &:nth-of-type(10) {
+            transition: transform .4s .8s;
+        }
+    }
+}

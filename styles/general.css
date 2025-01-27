@@ -1,0 +1,19 @@
+@import url("./configuracion_global.css");
+
+body {
+    width: 100vw;
+
+    header {
+        width: 100%;
+        height: var(--headerAlto);
+    }
+
+    main {
+        display: flex;
+        width: 100%;
+        height: calc(100vh - var(--headerAlto));
+
+
+        .contenedorGenerador {}
+    }
+}

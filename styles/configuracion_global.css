@@ -1,0 +1,43 @@
+:root {
+    --headerAlto: 80px;
+    --grisOscuro: rgb(32, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.borderRadius8 {
+    border-radius: 8px;
+}
+
+.borderGrey {
+    border: 1px solid grey;
+}
+
+.borderGreyRadius8 {
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.flexCentrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexFila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexColumna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column
+}
