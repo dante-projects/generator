@@ -19,12 +19,6 @@ nav {
             flex-direction: column;
             justify-content: space-between;
 
-            &:has(li .checkboxNav:checked) {
-                li {
-                    left: 0;
-                }
-            }
-
             li {
                 position: relative;
                 transform: translateX(-200px);
