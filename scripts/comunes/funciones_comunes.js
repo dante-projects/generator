@@ -10,7 +10,7 @@ export function nuevoElemento(contenedor, item, clases = null, id = null) {
 }
 
 /* creacion de elementos input con clases e id opcionales */
-export function nuevoInput(contenedor, tipo, clases = null, nombre = null) {
+export function nuevoInput(contenedor, tipo, clases = null, id = null, nombre = null) {
 
     const tiposPermitidos = [
         "text",
@@ -35,7 +35,7 @@ export function nuevoInput(contenedor, tipo, clases = null, nombre = null) {
         "image",
         "hidden"
     ]
-    const nuevoInput = nuevoElemento(contenedor, "input", clases)
+    const nuevoInput = nuevoElemento(contenedor, "input", clases, id)
     if (tiposPermitidos.includes(tipo)) {
         nuevoInput.type = tipo
     } else {
@@ -44,4 +44,8 @@ export function nuevoInput(contenedor, tipo, clases = null, nombre = null) {
     nombre ? nuevoInput.name = nombre : null
 
     return nuevoInput
+}
+
+export function inputSeleccionado(array) {
+    return array.find(item => item.checked)
 }

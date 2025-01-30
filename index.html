@@ -7,34 +7,90 @@
     <title>Generator</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/generador.css">
+    <link rel="stylesheet" href="styles/configuracion.css">
+    <link rel="stylesheet" href="styles/control_visual.css">
 </head>
 
 <body>
     <header class="borderGrey">header</header>
     <main class="borderGrey">
         <nav>
-            <form class="flexCentrado" action="https://none" method="get">
-                <ul id="listaCategorias" class="listaCategorias">
-                    <li class="flexCentrado" data-icono="./recursos/iconos/menu.svg"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/contenedor.svg"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/texto.svg"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/listas.svg"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/formulario.svg"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/"></li>
-                    <li class="flexCentrado" data-icono="./recursos/iconos/"></li>
-                </ul>
+            <div class="menuNav botonNav borderRadius4 flexCentrado borderGrey">
+                <input type="checkbox" class="inputOculto">
+                <div class="iconoBoton" style="mask-image: url(./recursos/iconos/menu.svg);"></div>
+            </div>
+            <form class="listaCategorias">
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/contenedor.svg);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/listas.svg);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/texto.svg);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/input.svg);"></div>
+                </div>
+
+
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
+                </div>
+                <div class="botonNav flexCentrado borderRadius4 borderGrey">
+                    <input type="radio" name="listaNav" class="inputOculto">
+                    <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
+                </div>
             </form>
         </nav>
         <div class="contenedorGenerador">
+            <div class="panelGenerador borderRadius4 borderGrey">
+                <div class="opcionVisual" style="mask-image: url(./recursos/iconos/pantalla.svg);">
+                    <input title="Modo diseño" class="inputOculto" type="radio" name="radioOpcionVisual" checked>
+                </div>
+                <div class="opcionVisual" style="mask-image: url(./recursos/iconos/expandir-horizontal.svg);">
+                    <input title="Vista horizontal" class="inputOculto" type="radio" name="radioOpcionVisual">
+                </div>
+                <div class="opcionVisual" style="mask-image: url(./recursos/iconos/expandir.svg);">
+                    <input title="Vista ampliada" class="inputOculto" type="radio" name="radioOpcionVisual">
+                </div>
+                <div class="opcionVisual" style="mask-image: url(./recursos/iconos/presentacion.svg);">
+                    <input title="Modo presentación" class="inputOculto presentacion" type="radio" name="radioOpcionVisual">
+                </div>
 
+                <div class="opcionVisual" style="mask-image: url(./recursos/iconos/maximizar.svg);">
+                    <input title="Pantalla completa" id="maximizarPantalla" class="inputOculto" type="checkbox" name="radioOpcionVisual">
+                </div>
+            </div>
+            <div class="generador borderRadius4">
+                <div class="pantalla borderGrey"></div>
+                <div class="controles"></div>
+            </div>
+            <div class="contenedorCodigo borderGrey borderRadius4"></div>
         </div>
-        <aside></aside>
+        <aside class="contenedorConfiguracion borderGrey"></aside>
     </main>
 
-    <script type="module" src="./scripts/nav.js"></script>
+    <script type="module" src="./scripts/pantalla_completa.js"></script>
+
 </body>
 
 </html>

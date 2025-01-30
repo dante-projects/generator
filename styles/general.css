@@ -4,6 +4,7 @@ body {
     width: 100vw;
 
     header {
+        position: fixed;
         width: 100%;
         height: var(--headerAlto);
     }
@@ -11,9 +12,7 @@ body {
     main {
         display: flex;
         width: 100%;
-        height: calc(100vh - var(--headerAlto));
-
-
-        .contenedorGenerador {}
-    }
+        overflow-x: hidden;
+/*         height: calc(100vh - var(--headerAlto));
+ */    }
 }

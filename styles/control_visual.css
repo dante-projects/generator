@@ -1,0 +1,122 @@
+:root {
+    --transitionTime: 1.2s;
+}
+
+body:has(main .panelGenerador .opcionVisual:first-of-type input:checked) {
+
+    header {
+        transform: translateY(0);
+        transition: ease-in-out var(--transitionTime);   
+    }
+
+    main nav {
+        transform: translateX(0);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main aside {
+        transform: translateX(0);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main .contenedorGenerador {
+        transition: ease-in-out var(--transitionTime);
+
+        .generador {
+            transition: ease-in-out var(--transitionTime);
+        }
+    }
+}
+
+body:has(main .panelGenerador .opcionVisual:nth-of-type(2) input:checked) {
+    
+    header {
+        transform: translateY(-100%);
+        transition: ease-in-out var(--transitionTime);   
+    }
+
+    main nav {
+        transform: translateX(-100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main aside {
+        transform: translateX(100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main .contenedorGenerador {
+        transform: translateX(calc(var(--navAncho) * -1)) translateY(calc(var(--headerAlto) * -1));
+        width: 100%;
+        transition: ease-in-out var(--transitionTime);
+
+        .generador {
+            width: 80%;
+            transition: ease-in-out var(--transitionTime);
+        }
+    }
+}
+
+body:has(main .panelGenerador .opcionVisual:nth-of-type(3) input:checked) {
+    
+    header {
+        transform: translateY(-100%);
+        transition: ease-in-out var(--transitionTime);   
+    }
+
+    main nav {
+        transform: translateX(-100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main aside {
+        transform: translateX(100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main .contenedorGenerador {
+        transform: translateX(calc(var(--navAncho) * -1)) translateY(calc(var(--headerAlto) * -1));
+        width: 100%;
+        transition: ease-in-out var(--transitionTime);
+
+        .generador {
+            width: 90%;
+            height: calc(90vh - var(--headerAlto) - 20px);
+            transition: ease-in-out var(--transitionTime);
+        }
+    }
+}
+
+body:has(main .panelGenerador .opcionVisual:nth-of-type(4) input:checked) {
+    
+    header {
+        transform: translateY(-100%);
+        transition: ease-in-out var(--transitionTime);   
+    }
+
+    main nav {
+        transform: translateX(-100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main aside {
+        transform: translateX(100%);
+        transition: ease-in-out var(--transitionTime);
+    }
+
+    main .contenedorGenerador {
+        transform: translateX(calc(var(--navAncho) * -1)) translateY(calc(var(--headerAlto) * -1));
+        width: 100%;
+        transition: ease-in-out var(--transitionTime);
+
+        .generador {
+            width: 100%;
+            height: calc(100vh - var(--headerAlto));
+            transition: ease-in-out var(--transitionTime);
+        }
+
+        .generador, .pantalla {
+            border-radius: 0;
+        }
+    }
+}

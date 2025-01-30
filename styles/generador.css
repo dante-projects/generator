@@ -1,0 +1,70 @@
+:root {
+    --panelGeneradorAlto: 40px;
+}
+
+.contenedorGenerador {
+    position: relative;
+    top: var(--headerAlto);
+    left: var(--navAncho);
+    width: calc(100% - calc(var(--navAncho) + var(--asideAncho)));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    
+    .panelGenerador {
+        width: 90%;
+        height: 40px;
+        background-color: var(--grisOscuro);
+        display: flex;
+
+        .opcionVisual {
+            height: 100%;
+            aspect-ratio: 1/1;
+            margin-left: 10px;
+            background-color: grey;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: 70%;
+
+            &:hover {
+                background-color: white;
+            }
+
+            & input:checked {
+                background-color: var(--botonSeleccionado);
+            }
+
+            & input:disabled {
+                background-color: rgb(63, 63, 63);
+            }
+        }
+    }
+
+    .generador {
+        margin-top: 20px;
+        width: 70%;
+        height: 60vh;
+        overflow: hidden;
+
+        .pantalla {
+            width: 100%;
+            height: calc(100% - var(--panelGeneradorAlto));
+            box-shadow: inset 0 0 20px grey;
+            border-radius: 4px 4px 0 0;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .controles {
+            width: 100%;
+            height: var(--panelGeneradorAlto);
+            background-color: var(--grisOscuro);
+        }
+    }
+
+    .contenedorCodigo {
+        width: 90%;
+        height: 300vh;
+        margin-top: 40px;
+    }
+}
