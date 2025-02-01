@@ -1,6 +1,9 @@
 export default {
+  testEnvironment: "jest-environment-jsdom",  // Usa el entorno jsdom instalado
   transform: {
-    "^.+\\.js$": "babel-jest"
+    "^.+\\.[tj]sx?$": "babel-jest",  // Transforma los archivos JS/TS con Babel
   },
-  testEnvironment: "jest-environment-jsdom"
-}
+  transformIgnorePatterns: [
+    "/node_modules/(?!mi-paquete|otro-paquete)/"  // Si necesitas transformar algunas dependencias
+  ]
+};

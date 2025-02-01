@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator</title>
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/categorias.css">
     <link rel="stylesheet" href="styles/generador.css">
     <link rel="stylesheet" href="styles/configuracion.css">
     <link rel="stylesheet" href="styles/control_visual.css">
@@ -17,52 +17,52 @@
     <main class="borderGrey">
         <nav>
             <div class="menuNav botonNav borderRadius4 flexCentrado borderGrey">
-                <input type="checkbox" class="inputOculto">
+                <input type="checkbox" class="inputOculto" checked>
                 <div class="iconoBoton" style="mask-image: url(./recursos/iconos/menu.svg);"></div>
             </div>
-            <form class="listaCategorias">
+            <form id="listaCategorias" class="listaCategorias">
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="contenedores" checked>
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/contenedor.svg);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="listas">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/listas.svg);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="texto">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/texto.svg);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="inputs">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/input.svg);"></div>
                 </div>
 
 
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="noConfigurado">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="noConfigurado">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="noConfigurado">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="noConfigurado">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
                 </div>
                 <div class="botonNav flexCentrado borderRadius4 borderGrey">
-                    <input type="radio" name="listaNav" class="inputOculto">
+                    <input type="radio" name="listaNav" class="inputOculto" data-cat="noConfigurado">
                     <div class="iconoBoton" style="mask-image: url(./recursos/iconos/);"></div>
                 </div>
             </form>
         </nav>
         <div class="contenedorGenerador">
-            <div class="panelGenerador borderRadius4 borderGrey">
+            <div class="panelGenerador borderRadius4">
                 <div class="opcionVisual" style="mask-image: url(./recursos/iconos/pantalla.svg);">
                     <input title="Modo diseño" class="inputOculto" type="radio" name="radioOpcionVisual" checked>
                 </div>
@@ -86,11 +86,12 @@
             </div>
             <div class="contenedorCodigo borderGrey borderRadius4"></div>
         </div>
-        <aside class="contenedorConfiguracion borderGrey"></aside>
+        <aside id="contenedorConfiguracion" class="contenedorConfiguracion"></aside>
     </main>
 
-    <script type="module" src="./scripts/pantalla_completa.js"></script>
-
+    <script type="module" src="./scripts/modos_vista.js"></script>
+    <script type="module" src="./scripts/seleccion_categorias.js"></script>
+    <script type="module" src="./scripts/seleccion_etiquetas.js"></script>
 </body>
 
 </html>

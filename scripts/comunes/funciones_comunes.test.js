@@ -30,14 +30,14 @@ describe("nuevoInput", () => {
     })
 })
 
-describe("inputSeleccionado", () => {
-    test("Devuelve el elemento checked = true", () => {
-        const inputs = [
-            { checked: false, value: 1 },
-            { checked: false, value: 2 },
-            { checked: true, value: 3 },
-        ]
-        
-        expect(comunes.inputSeleccionado(inputs)).toEqual(inputs[2])
+describe("seleccionPublicar", () => {
+    test("Comprueba la pubicacion del evento", () => {
+        const array = "datos de prueba"
+        let datosRecibidos
+        document.addEventListener("eventoTest", (datos) => {
+            datosRecibidos = datos.detail
+        })
+        comunes.publicarEvento(array, "eventoTest")
+        expect(datosRecibidos).toBe("datos de prueba")
     })
 })

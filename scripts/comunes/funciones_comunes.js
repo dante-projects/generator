@@ -1,17 +1,14 @@
 /* creacion de elementos con clases e id opcionales */
 export function nuevoElemento(contenedor, item, clases = null, id = null) {
-
     const nuevoElemento = document.createElement(item)
     contenedor.appendChild(nuevoElemento)
     clases ? nuevoElemento.className = clases : null
     id ? nuevoElemento.setAttribute("id", id) : null
-
     return nuevoElemento
 }
 
 /* creacion de elementos input con clases e id opcionales */
 export function nuevoInput(contenedor, tipo, clases = null, id = null, nombre = null) {
-
     const tiposPermitidos = [
         "text",
         "password",
@@ -42,10 +39,14 @@ export function nuevoInput(contenedor, tipo, clases = null, id = null, nombre = 
         console.log("Error en la creacion del input:\nParametro de tipo no reconocido: " + tipo)
     }
     nombre ? nuevoInput.name = nombre : null
-
     return nuevoInput
 }
 
-export function inputSeleccionado(array) {
-    return array.find(item => item.checked)
+export function publicarEvento(item, nombreDelEvento) {
+    const evento = new CustomEvent(nombreDelEvento, { detail: item })
+    document.dispatchEvent(evento)
+}
+
+export function primeraLetraMay(palabra) {
+    return palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase()
 }
